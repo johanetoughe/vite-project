@@ -5,9 +5,9 @@ import Paper from "@mui/material/Paper";
 import { Typography } from "@mui/material";
 import { Avatar } from "@mui/material";
 import "@/modules/home/Dashboard.css";
-import Banner from "./Banner";
+import Banner from "../home/Banner";
 import { Link } from "react-router-dom";
-import "./Dashboard.css";
+import '../home/Dashboard.css';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -22,7 +22,7 @@ const Img = styled("img")({
   maxWidth: "100%",
   maxHeight: "100%",
 });
-export default function CSSGrid() {
+export default function Gestionvidash() {
   return (
     <div>
       <Banner />
@@ -35,57 +35,37 @@ export default function CSSGrid() {
         <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={3}>
           <Box gridColumn="span 4">
             <Item>
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/1747/1747119.png"
-                width="100px"
-                height="100px"
-              />
+              <img src="https://cdn-icons-png.flaticon.com/512/4599/4599811.png" width='100px' height='100px'/>
               <Typography variant="h5" gutterBottom component="div">
-                Gestion des visiteurs
+                Consulter la liste des visiteurs
               </Typography>
-
-              <Link to="/modules/visites/Gestionvidash">Continuer</Link>
-            </Item>
-          </Box>
-          <Box gridColumn="span 4">
-            <Item>
-              <img
-                src="https://www.nicepng.com/png/full/806-8066161_download-for-free-at-icons8-meeting-people-icon.png"
-                width="100px"
-                height="100px"
-              />
-              <Typography variant="h5" gutterBottom component="div">
-                Gestion des adhérents
-              </Typography>
-
               <Link to="">Continuer</Link>
             </Item>
           </Box>
           <Box gridColumn="span 4">
             <Item>
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/1982/1982945.png"
-                width="100px"
-                height="100px"
-              />
+            <img src="https://cdn.icon-icons.com/icons2/37/PNG/512/adduser_a%C3%B1adir_3553.png" width='100px' height='100px'/>
               <Typography variant="h5" gutterBottom component="div">
-                Gestion du courier
+                Ajouter un visiteur
               </Typography>
-
-              <Link to="">Continuer</Link>
+              <Link to="/modules/visites/VisitorCreateForm">Continuer</Link>
             </Item>
           </Box>
           <Box gridColumn="span 4">
             <Item>
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/2720/2720795.png"
-                width="100px"
-                height="100px"
-              />
+            <img src="https://cdn.icon-icons.com/icons2/38/PNG/512/contactcard_contactcard_tarjetadecontacto_4815.png" width='100px' height='100px'/>
               <Typography variant="h5" gutterBottom component="div">
-                Indicateurs de performance
+                Créer une visite
               </Typography>
-
+              <Link to="/modules/visites/FicheVisiteForm">Continuer</Link>
+            </Item>
+          </Box>
+          <Box gridColumn="span 4">
+            <Item>
+            <img src="https://cdn-icons.flaticon.com/png/512/4644/premium/4644301.png?token=exp=1648247375~hmac=becff53a5735e2e301b3a3c5a1842c4b" width='100px' height='100px'/>
+              <Typography variant="h5" gutterBottom component="div">
+                Rediriger un visiteur
+              </Typography>
               <Link to="">Continuer</Link>
             </Item>
           </Box>
